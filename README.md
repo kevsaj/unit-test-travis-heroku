@@ -1,7 +1,28 @@
 # Tutorial: Using Unit Testing, ESLint, Github with Travis and Heroku for CI/CD
+## (README IN PROGRESS, INSTRUCTIONS MAY NOT BE CORRECT)
+## (Updated 2020)
 
-This repository demonstrates using eslint, unit testing, github, travis  
-and heroku to illustrate a full CI/CD workflow
+This repository demonstrates the following:
+
+* Syntax Checking using eslint
+* Unit testing with Mocha / Chai
+* Using Github for version control
+* Using Travis for Continuous Integration / Continuous Delivery (CI/CD)
+* Using Heroku with Travis for Continuous Deployment (CD)
+
+## Requirements
+* Node 14.x
+* NPM / NPX 6.x
+
+## Node Libraries used
+* Dotenv
+* Mocha
+* Chai
+* Express
+* ESLint
+* ESlint Plugin Support
+* ESLint AirBnB Support
+
 
 
 ## Install with NPM -i
@@ -14,49 +35,47 @@ and heroku to illustrate a full CI/CD workflow
 * eslint
 * eslint rules (airbnb)
 
+## Windows Users
+* You will be required to install Ruby (Version 2.6.3 or higher) to
+  install the Travis CLI along with Ruby GEMS - https://rubyinstaller.org/
+
+## Travis CLI
+
+https://github.com/travis-ci/travis.rb#installation
+
+You may need to install the Travis CLI with administrator permissions,
+whether you are a MAC user or a WIN user.
+
+* Mac Users -
+
+`gem install travis --no-document --user-install`
+
+or (if you need admin access)
+
+`sudo su ` then enter your mac password, then
+
+`gem install travis --no-document --user-install`
+
+then `exit` if there are no errors.
 
 
-install eslint globally to make the CLI available
+* Windows Users -
 
-beware of administrator permission requirements (may need to sudo or
-launch git bash shell as administrator)
+`gem install travis` should be good, as long as you are logged inan
+_administrator_ for your machine, and perhaps your terminal or git bash
+shell.
 
-change the extends settings in .eslintrc.json to
+For Mac or Windows, you will need to make sure that Ruby GEMS is added
+to your PATH environment variable
 
-    "extends": "airbnb-base"
-
-
-Add the sample app files server.js and controller/api-routes.js i.e.
-write out your code
-
-add, commit and push changes.
-
-return to github repo and configure the following settings
-
-* Navigate to the repo's page, then click the "Settings" tab.
-
-* Select "Branches" from the left sidebar.
-
-* Under "Branch protection rules", click "Add Rule"
-
-* For "Branch name pattern" , choose "master". The page should display ""
-
-* Check off the following options:
-
-  * "Protect this branch"
-
-  * "Require pull request reviews before merging"
-
-  * "Include administrators"
-
-  * "Require status checks to pass before merging"
-
-  * "Require branches to be up to date before merging"
-
-* Click "Save changes"
+* MAC - read "I INSTALLED GEMS WITH --user-install AND THEIR COMMANDS ARE
+NOT AVAILABLE" at https://guides.rubygems.org/faqs/
+* WIN - when using the Ruby Installer, if asked for checking 'Add Ruby
+  executables to your path' then CHECK THAT OPTION. in fact, check all
+  the options (Install TCL/TK Support and associate .rb and .rbw files
+  with the the ruby install)
 
 
-With this setup, you will need to add a colleague to be a collaborator
-so they can approve your changes.
-
+additional sources:
+* https://stackify.com/install-ruby-on-windows-everything-you-need-to-get-going/
 
