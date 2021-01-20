@@ -4,7 +4,7 @@
   "description": "This repository demonstrates using JS Testing (Linting and Unit), Github and Travis to deploy to Heroku.",
   "main": "server.js",
   "scripts": {
-    "test": "npm run lint server.js && mocha ./tests/index-spec.js --exit"
+    "test": "eslint server.js && npx mocha ./tests/index-spec.js --exit"
   },
   "repository": {
     "type": "git",
