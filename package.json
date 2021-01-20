@@ -1,0 +1,32 @@
+{
+  "name": "github-travis-heroku-2020",
+  "version": "1.0.0",
+  "description": "This repository demonstrates using JS Testing (Linting and Unit), Github and Travis to deploy to Heroku.",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm run lint server.js && mocha ./tests/index-spec.js --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eapostol/github-travis-heroku.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "eslint",
+    "mocha",
+    "chai",
+    "github",
+    "travis",
+    "heroku"
+  ],
+  "author": "Edward J. Apostol",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eapostol/github-travis-heroku/issues"
+  },
+  "homepage": "https://github.com/eapostol/github-travis-heroku#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
