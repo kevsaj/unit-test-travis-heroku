@@ -7,7 +7,7 @@ const app = express();
 const hostname = process.env.HOST;
 const PORT = process.env.PORT || 8080
 
-const apiRouteController = require("controller/api-routes")(app);
+const apiRouteController = require("./controller/api-routes")(app);
 
 const server = app.listen(PORT, () => {
     // eslint-disable-next-line no-console
